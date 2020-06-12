@@ -25,7 +25,7 @@ function readFileToArray(filePath){
     }
 }
 // Testing the function
-let path = "inspirationalquoes.txt";
+let path = "inspirationalquotes.txt";
 let quotes = readFileToArray(path);
 
 console.log(quotes);

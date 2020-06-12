@@ -8,15 +8,17 @@ const fs = require('fs')
 function readFileToArray(filePath){
     try {
         let data = fs.readFileSync(filePath, 'utf-8');
+        console.log("partially processed data");
         let lines = data.split('\n');
-        //No take all lines that are not empty and add them to quotes
+
+        //Now take all lines that are not empty and add them to quotes
         let quotes = [];
         for (let i = 0; i < lines.length; i++){
             if (lines[i] != ''){
                 quotes.push(lines[i]);
             }
         }
-        
+
         return quotes;
     } catch (error) {
         //You can replace this with a better message.

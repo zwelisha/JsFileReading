@@ -8,7 +8,6 @@ const fs = require('fs')
 function readFileToArray(filePath){
     try {
         let data = fs.readFileSync(filePath, 'utf-8');
-        console.log("partially processed data");
         let lines = data.split('\n');
 
         //Now take all lines that are not empty and add them to quotes
@@ -26,7 +25,7 @@ function readFileToArray(filePath){
     }
 }
 // Testing the function
-let path = "inspirationalquotes.txt";
+let path = "inspirationalquoes.txt";
 let quotes = readFileToArray(path);
 
 console.log(quotes);
